@@ -1,0 +1,25 @@
+/**
+ * Place your custom CSS styles here.
+ **/
+.celery-man{
+	position: fixed;
+	bottom: 0px;
+	z-index: 9999999999;
+	right: 0px;
+	height: 540px;
+	width: 900px;
+	pointer-events: none;
+}
+
+.celery-man .container{
+    width: 900px;
+    overflow:hidden;
+    display:block;
+    height: 545px;
+}
+
+.celery-man .container video{
+	margin-top: -5px;
+	max-width: none;
+	padding: 0;
+}
