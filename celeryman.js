@@ -1,16 +1,24 @@
+// This file will play the CeleryMan extension once clicked.
+
 var imgNum = Math.floor(Math.random() * (4 - 1)) + 1;
-var filename = "assets/" + imgNum + ".gif";
+var filename = "assets/gifs/" + imgNum + ".gif";
 var extensionId = chrome.runtime.id;
 filename = 'chrome-extension://' + extensionId + "/" + filename;
-console.log("Filename: " + filename);
-show_image(filename)
 
-function show_image(src) {
-  console.log("Inside show_image method!")
+loadCeleryMan(filename)
+
+function loadCeleryMan(src) {
+  // Play the audio and display the gif
+  play_audio()
+
   var img = document.createElement("img");
   img.src = src;
 
-  // This next line will just add it to the <body> tag
-  console.log("Appending child")
   document.body.appendChild(img);
+}
+
+function play_audio() {
+  // Plays the Tayne audio once called
+  var myAudio = new Audio(chrome.runtime.getURL("assets/audio/tayne_music.mp3"));
+  myAudio.play();
 }
