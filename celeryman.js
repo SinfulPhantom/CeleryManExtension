@@ -9,7 +9,7 @@ loadCeleryMan(filename)
 
 function loadCeleryMan(src) {
   // Play the audio and display the gif
-  play_audio()
+  play_audio();
 
   var img = document.createElement("img");
   img.src = src;
@@ -20,5 +20,6 @@ function loadCeleryMan(src) {
 function play_audio() {
   // Plays the Tayne audio once called
   var myAudio = new Audio(chrome.runtime.getURL("assets/audio/tayne_music.mp3"));
+  myAudio.loop = true;
   myAudio.play();
 }
