@@ -16,5 +16,5 @@
     "update_url": "https://clients2.google.com/service/update2/crx",
     "version": "1.0.1",
     "web_accessible_resources": [ "assets/*" ],
-    "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'"
+    "content_security_policy": "script-src 'self' 'sha256-7uirywmizaz5+PGImzCXxRL5rpNfzfyAH+fHLdtJ++c='; object-src 'self'"
 }
